@@ -19,8 +19,9 @@ import java.util.Map;
 
 public class Cook extends AppCompatActivity {
 
+    private static final String TAG = "com.example.cook_buddy";
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("recipes");
+    DatabaseReference ref = database.getReference().child("recipes");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,40 +35,39 @@ public class Cook extends AppCompatActivity {
 
         public String name;
         public ArrayList<String> items;
-        public Integer calories;
+        public int calories;
+
+        public Recipe() {
+        }
 
         public Recipe(String vname, ArrayList<String> vitems, Integer vcalories) {
             name = vname;
             items = vitems;
             calories = vcalories;
         }
+
+        public String getName() {
+            return name;
+        }
     }
 
     private void getData() {
-
-        // calling add value event listener method
-        // for getting the values from database.
-
-//        Query phoneQuery = ref.equalTo("recipes");
-//        phoneQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-//                    Recipe user = singleSnapshot.getValue(Recipe.class);
-//                    Log.d("hi", user.name);
-//                }
-//            }
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.d("hi", "onCancelled", databaseError.toException());
-//            }
-//        });
-        
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Recipe recipe = snapshot.getValue(Recipe.class);
-                Toast.makeText(Cook.this, "Data is retrieved", Toast.LENGTH_SHORT).show();
+                long size = snapshot.getChildrenCount();
+                ArrayList<Recipe> recipes = new ArrayList<>();
+                for(long i=0; i<size; i++){
+                    String name = snapshot.child(String.valueOf(i)).child("name").getValue().toString();
+                    int calories = Integer.parseInt(snapshot.child(String.valueOf(i)).child("calories").getValue().toString());
+                    long num = snapshot.child(String.valueOf(i)).child("items").getChildrenCount();
+                    ArrayList<String> items = new ArrayList<>();
+                    for(long j=0; j<num; j++){
+                        items.add(snapshot.child(String.valueOf(i)).child("items").child(String.valueOf(i)).getValue().toString());
+                    }
+                    recipes.add(new Recipe(name, items, calories));
+                }
+                Toast.makeText(Cook.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
             }
 
             @Override

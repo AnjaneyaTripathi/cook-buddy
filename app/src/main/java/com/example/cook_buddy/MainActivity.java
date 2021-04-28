@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         public String name;
         public ArrayList<String> items;
-        public Integer calories;
+        public int calories;
 
-        public Recipe(String vname, ArrayList<String> vitems, Integer vcalories) {
+        public Recipe(String vname, ArrayList<String> vitems, int vcalories) {
             name = vname;
             items = vitems;
             calories = vcalories;
