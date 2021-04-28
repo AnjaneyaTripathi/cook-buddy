@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536122942707",
+    "project_id": "cook-buddy-a7e8b",
+    "storage_bucket": "cook-buddy-a7e8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536122942707:android:8f9411fbb25d89ff980386",
+        "android_client_info": {
+          "package_name": "com.example.cook_buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536122942707-g6kg3nb6s5ooj3vft9e17v5f4sqdubeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccM_q1xu3GFhvyqmz52ct62F2EuP_lfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536122942707-g6kg3nb6s5ooj3vft9e17v5f4sqdubeo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

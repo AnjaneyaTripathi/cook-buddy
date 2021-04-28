@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItem"
+    android:orientation="vertical"
+    android:background="#c4f1ff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a New Item"
+        android:fontFamily="@font/permanent_marker"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:layout_weight="0.2"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:layout_weight="0.2"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="@drawable/custom_edittext"/>
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:layout_weight="0.2"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="@drawable/custom_edittext"/>
+
+    <EditText
+        android:id="@+id/calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calories"
+        android:layout_weight="0.2"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="@drawable/custom_edittext"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="Add Item"
+        android:layout_margin="20dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/playfair_display"
+        android:textSize="30sp"
+        android:background="@drawable/rounded_buttons"/>
+
+</LinearLayout>
