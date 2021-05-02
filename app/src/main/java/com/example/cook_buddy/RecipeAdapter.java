@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,18 +17,38 @@ import java.util.ArrayList;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ExampleViewHolder> {
     private ArrayList<RecipeItem> mExampleList;
-    private AdapterView.OnItemClickListener mListener;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     public static class ExampleViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextView0;
         public TextView mTextView2;
-        private CardView cardView;
+        public Button btn;
 
-        public ExampleViewHolder(View itemView) {
+        public ExampleViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
             mTextView0 = itemView.findViewById(R.id.name);
             mTextView2 = itemView.findViewById(R.id.calories);
-            cardView = itemView.findViewById(R.id.cardview);
+            btn = itemView.findViewById(R.id.btn);
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 
@@ -38,7 +59,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ExampleVie
     @Override
     public ExampleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_item, parent, false);
-        ExampleViewHolder evh = new ExampleViewHolder(v);
+        ExampleViewHolder evh = new ExampleViewHolder(v, mListener);
         return evh;
     }
 

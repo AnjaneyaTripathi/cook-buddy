@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
+
 public class Cook extends AppCompatActivity {
 
     private static final String TAG = "com.example.cook_buddy";
@@ -27,7 +29,7 @@ public class Cook extends AppCompatActivity {
     DatabaseReference ref = database.getReference();
     private RecyclerView mRecyclerView;
 
-    private RecyclerView.Adapter mAdapter;
+    private RecipeAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     public ArrayList<Recipe> recipes = new ArrayList<>();
     public ArrayList<Food> foods = new ArrayList<>();
@@ -148,6 +150,14 @@ public class Cook extends AppCompatActivity {
 
                 mRecyclerView.setLayoutManager(mLayoutManager);
                 mRecyclerView.setAdapter(mAdapter);
+
+                mAdapter.setOnItemClickListener(new RecipeAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(int position) {
+                        Toast.makeText(Cook.this, position + " item clicked!", Toast.LENGTH_SHORT).show();
+                    }
+
+                });
 
                 Toast.makeText(Cook.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
             }
