@@ -54,16 +54,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Map<String, Recipe> recipes = new HashMap<>();
 
         ArrayList<String> chocolateMilk = new ArrayList<String>();
-        chocolateMilk.add("chocolate");
-        chocolateMilk.add("milk");
+        chocolateMilk.add("Chocolate");
+        chocolateMilk.add("Milk");
         recipes.put("0", new Recipe("Chocolate Milk", chocolateMilk, 230));
 
         ArrayList<String> salad = new ArrayList<String>();
-        salad.add("carrot");
-        salad.add("cucumber");
-        salad.add("tomato");
-        salad.add("olive");
+        salad.add("Carrot");
+        salad.add("Cucumber");
+        salad.add("Tomato");
+        salad.add("Olive");
         recipes.put("1", new Recipe("Salad", salad, 150));
+
+        ArrayList<String> lemonade = new ArrayList<String>();
+        lemonade.add("Lemon");
+        lemonade.add("Water");
+        recipes.put("2", new Recipe("Lemonade", lemonade, 30));
 
         dbRef.setValue(recipes);
     }
@@ -77,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("hi", "cook");
                 break;
             case R.id.see:
-//                Intent intent2 = new Intent(this, View.class);
-//                startActivity(intent2);
+                Intent intent2 = new Intent(this, See.class);
+                startActivity(intent2);
                 Log.d("hi", "see");
                 break;
             case R.id.track:

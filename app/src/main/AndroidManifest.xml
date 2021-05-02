@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cookbuddy">
-        <activity android:name=".View"></activity>
+        <activity android:name=".See"></activity>
         <activity android:name=".Cook" />
         <activity android:name=".TrackCalories" />
         <activity android:name=".AddItem" />

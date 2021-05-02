@@ -16,4 +16,12 @@
         android:gravity="center"
         android:fontFamily="@font/permanent_marker" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c4f1ff"
+        android:scrollbars="vertical"
+        android:layout_margin="10dp"/>
+
 </LinearLayout>
