@@ -89,7 +89,7 @@ public class See extends AppCompatActivity {
                 mRecyclerView.setLayoutManager(mLayoutManager);
                 mRecyclerView.setAdapter(mAdapter);
 
-                Toast.makeText(See.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(See.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
             }
 
             @Override

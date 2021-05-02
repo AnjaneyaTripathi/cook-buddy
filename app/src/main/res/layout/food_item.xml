@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="4dp"
+    android:background="#c4f1ff">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:background="#1e1e1e">
+        android:layout_margin="0dp"
+        android:background="#c4f1ff"
+        android:paddingBottom="20sp">
 
         <TextView
             android:id="@+id/name"
@@ -17,19 +19,48 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:text="Line 1"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingLeft="30sp"
+            android:fontFamily="@font/permanent_marker"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="8dp"
+            android:text="Quantity Available: "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingLeft="30sp"
+            android:fontFamily="@font/playfair_display"/>
 
         <TextView
             android:id="@+id/quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
             android:layout_marginStart="8dp"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/t1"
             android:text="Line 2"
-            android:textColor="#e3e3e3"
-            android:textSize="15sp" />
+            android:textColor="#1e1e1e"
+            android:textSize="15sp"
+            android:paddingLeft="30sp"
+            android:fontFamily="@font/playfair_display"/>
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+            android:layout_marginStart="8dp"
+            android:text="Calories: "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingLeft="30sp"
+            android:fontFamily="@font/playfair_display"/>
 
         <TextView
             android:id="@+id/calories"
@@ -37,9 +68,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/quantity"
             android:layout_marginStart="8dp"
-            android:textColor="@android:color/white"
+            android:layout_toRightOf="@+id/t2"
+            android:textColor="@android:color/black"
             android:text="Line 3"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:paddingLeft="30sp"
+            android:fontFamily="@font/playfair_display"/>
 
     </RelativeLayout>
 

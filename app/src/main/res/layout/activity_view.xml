@@ -14,7 +14,8 @@
         android:textSize="50sp"
         android:text="Items Available"
         android:gravity="center"
-        android:fontFamily="@font/permanent_marker" />
+        android:fontFamily="@font/permanent_marker"
+        android:paddingBottom="30sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Steps"
+    android:background="#c4f1ff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:layout_weight="0.1"
+        android:fontFamily="@font/permanent_markers"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:textSize="23sp"
+        android:padding="10sp"
+        android:layout_weight="0.2"
+        android:id="@+id/ingredients"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:padding="10sp"
+        android:textSize="23sp"
+        android:layout_weight="0.6"
+        android:id="@+id/proc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:padding="10sp"
+        android:textSize="23sp"
+        android:layout_weight="0.1"
+        android:id="@+id/calories"/>
+
+</LinearLayout>

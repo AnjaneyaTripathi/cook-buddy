@@ -4,13 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="4dp"
-    android:id="@+id/cardview">
+    android:background="#c4f1ff"
+    android:id="@+id/cardview"
+    android:paddingTop="30sp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:background="#1e1e1e">
+        android:layout_margin="0dp"
+        android:background="#c4f1ff"
+        android:paddingBottom="20dp">
 
         <TextView
             android:id="@+id/name"
@@ -18,25 +21,32 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:text="Line 1"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/permanent_marker"/>
 
         <TextView
             android:id="@+id/calories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
-            android:layout_marginStart="8dp"
-            android:textColor="#e3e3e3"
+            android:textColor="#1e1e1e"
             android:text="Line 3"
-            android:textSize="15sp" />
+            android:layout_marginLeft="40sp"
+            android:textSize="15sp"
+            android:fontFamily="@font/playfair_display"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn"
-            android:layout_below="@+id/calories"
+            android:layout_toRightOf="@+id/calories"
+            android:backgroundTint="#002b7a"
+            android:layout_marginLeft="200sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/playfair_display"
             android:text="Cook"/>
 
     </RelativeLayout>

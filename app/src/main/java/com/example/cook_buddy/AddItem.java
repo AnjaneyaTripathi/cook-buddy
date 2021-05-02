@@ -99,7 +99,6 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
                                 int quantity = Integer.parseInt(snapshot.child(String.valueOf(i)).child("quantity").getValue().toString());
                                 items.put(String.valueOf(i), new Item(name, quantity, calories));
                             }
-
 //                                                    items.put("0", new Item("Chocolate", 7, 230));
 //                                                    items.put("1", new Item("Carrot", 10, 150));
 //                                                    items.put("2", new Item("Cucumber", 7, 100));
@@ -121,7 +120,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
                             Intent intent1 = new Intent(AddItem.this, MainActivity.class);
                             startActivity(intent1);
 
-                            Toast.makeText(AddItem.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(AddItem.this, "Data Retrieved", Toast.LENGTH_SHORT).show();
                         }
                     }
 

@@ -38,7 +38,6 @@
         android:text="Add Item"
         android:textColor="@color/white"
         android:textSize="30sp"
-
         android:layout_margin="20dp"
         android:layout_weight="0.25"
         android:fontFamily="@font/playfair_displays"
@@ -52,7 +51,6 @@
         android:text="Suggest Dishes"
         android:textColor="@color/white"
         android:textSize="30sp"
-
         android:layout_margin="20dp"
         android:layout_weight="0.25"
         android:fontFamily="@font/playfair_displays"
@@ -66,9 +64,9 @@
         android:text="Health Tracker"
         android:textColor="@color/white"
         android:textSize="30sp"
-
         android:layout_margin="20dp"
         android:layout_weight="0.25"
+        android:visibility="gone"
         android:fontFamily="@font/playfair_displays"
         android:background="@drawable/rounded_buttons"/>
 
