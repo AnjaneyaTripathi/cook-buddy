@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Steps"
     android:background="#c4f1ff"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/title"
